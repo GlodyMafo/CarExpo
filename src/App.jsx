@@ -8,13 +8,13 @@ import OtheCars from "./components/OtherCars";
 
 export default function App() {
   return (
-    <div className="bg-black px-40 ">
-      
-        <Navbar />
-        <Header />
-        <DisplayCar />
-        <OtheCars />
-   
+    <div className="bg-black">
+      <div className=" px-40 bg-center h-screen" style={{ backgroundImage: "url('src/assets/2187256.jpg')",}}>
+          <Navbar />
+          <Header />
+      </div>
+      <DisplayCar />
+      <OtheCars />
     </div>
   );
 }
