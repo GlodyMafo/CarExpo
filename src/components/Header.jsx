@@ -1,14 +1,12 @@
 import React from "react";
 import Car from "../assets/Car.png";
-import { Canvas } from "@react-three/fiber";
-import { useGLTF, Stage, PresentationControls } from "@react-three/drei";
-import Firt3D from "../components/First3D";
+
 
 function Header() {
   return (
-    <section className="h-screen pt-40">
+    <section className=" pt-40 ">
       <div className="flex justify-between items-center  text-white">
-        <div className="w-3/5">
+        <div className="w-2/4">
           <h1 className="text-5xl font-bold">
             PIXIUM <br /> <span className="text-4xl font-normal">2024</span>
           </h1>
@@ -25,12 +23,12 @@ function Header() {
             Know more
           </button>
         </div>
-
+        
         <img className="pt-20"
           src={Car}
           alt=""
         />
-
+        
       </div>
     </section>
   );

@@ -2,7 +2,8 @@ import React from "react";
 import Car from "../assets/Car.png";
 import { Canvas } from "@react-three/fiber";
 import {useGLTF, Stage, PresentationControls} from "@react-three/drei"
-import Firt3D from "../components/First3D";
+import Second3D from "./Second3D ";
+
 
 function DisplayCar() {
   return (
@@ -18,11 +19,13 @@ function DisplayCar() {
           charge autorisée à hauteur de 455 kg.
         </p>
       </div>
-      <Canvas dpr={[1,2]} shadows camera={{fov:45}} style={{"position":"absolute", "background":"transparent"}} >
+      
+      <Canvas dpr={[5,7]} shadows camera={{fov:45}} style={{"position":"absolute", "background":"transparent"}} >
       {/* <color attach="background" args={["#101010"]}/> */}
      <PresentationControls speed={1.5} global zoom={0.5} polar={[-0.1, Math.PI/4]}>
      <Stage environment={"sunset"}>
-    <Firt3D scale={0.01}/>
+    {/* <Second3D scale={0.01}/> */}
+    <Second3D scale={0.01}/>
      </Stage>
       </PresentationControls> 
     </Canvas>
