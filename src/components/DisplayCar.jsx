@@ -1,10 +1,13 @@
 import React from "react";
 import Car from "../assets/Car.png";
+import { Canvas } from "@react-three/fiber";
+import {useGLTF, Stage, PresentationControls} from "@react-three/drei"
+import Firt3D from "../components/First3D";
 
 function DisplayCar() {
   return (
-    <section className="h-screen flex flex-col items-center">
-      <h1 className="text-white text-5xl font-bold ">Meilleure Vente</h1>
+    <section className="h-screen flex flex-col items-center pt-10">
+      <h1 className="text-white text-5xl font-bold pt-10 ">Meilleure Vente</h1>
 
       <div className="pt-20 pl-20">
         <h2 className="text-white text-3xl font-semibold">PIXIUM 2024</h2>
@@ -15,7 +18,14 @@ function DisplayCar() {
           charge autorisée à hauteur de 455 kg.
         </p>
       </div>
-      <img className="pl-20 " src={Car} alt="" />
+      <Canvas dpr={[1,2]} shadows camera={{fov:45}} style={{"position":"absolute", "background":"transparent"}} >
+      {/* <color attach="background" args={["#101010"]}/> */}
+     <PresentationControls speed={1.5} global zoom={0.5} polar={[-0.1, Math.PI/4]}>
+     <Stage environment={"sunset"}>
+    <Firt3D scale={0.01}/>
+     </Stage>
+      </PresentationControls> 
+    </Canvas>
     </section>
   );
 }
