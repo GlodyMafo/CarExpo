@@ -2,11 +2,9 @@
 import Navbar from "./components/NavBar";
 import Header from "./components/Header";
 import DisplayCar from "./components/DisplayCar";
-import CarTicket from "./components/CarTicket";
 import OtheCars from "./components/OtherCars";
-import { BoxGeometry } from "three";
 import React, { useRef } from 'react';
-import CarModal from "./components/modal";
+
 
 
 export default function App() {
@@ -23,7 +21,7 @@ export default function App() {
           <Navbar />
           <Header />
           <div className="hero">
-        <a onClick={handleClick} className="scroll-link">
+        <a onClick={handleClick} className="scroll-link cursor-pointer">
           <svg
             className="mouse"
             xmlns="http://www.w3.org/2000/svg"
@@ -47,12 +45,9 @@ export default function App() {
       </div>
       </div>
       <DisplayCar ref={ref} />
-      <div className=" px-40 bg-center h-screen" style={{ backgroundImage: "url('src/assets/2187256.jpg')"}}>
+      <div className=" px-40 bg-center h-sreen" style={{ backgroundImage: "url('src/assets/2187256.jpg')"}}>
       <OtheCars />
       </div>
-
-      <CarModal/>
-     
     </div>
   );
 }

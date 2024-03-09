@@ -1,5 +1,4 @@
 import React, { forwardRef } from "react";
-import Car from "../assets/Car.png";
 import { Canvas } from "@react-three/fiber";
 import {useGLTF, Stage, PresentationControls} from "@react-three/drei"
 import Second3D from "./Second3D ";
@@ -24,7 +23,6 @@ function DisplayCar({props}, ref) {
       {/* <color attach="background" args={["#101010"]}/> */}
      <PresentationControls speed={1.5} global zoom={0.5} polar={[-0.1, Math.PI/4]}>
      <Stage environment={"sunset"}>
-    {/* <Second3D scale={0.01}/> */}
     <Second3D scale={0.01}/>
      </Stage>
       </PresentationControls> 
