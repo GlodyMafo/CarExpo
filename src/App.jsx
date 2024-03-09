@@ -6,6 +6,7 @@ import CarTicket from "./components/CarTicket";
 import OtheCars from "./components/OtherCars";
 import { BoxGeometry } from "three";
 import React, { useRef } from 'react';
+import CarModal from "./components/modal";
 
 
 export default function App() {
@@ -46,9 +47,11 @@ export default function App() {
       </div>
       </div>
       <DisplayCar ref={ref} />
-      <div className=" px-40 bg-center h-screen" style={{ backgroundImage: "url('src/assets/2187256.jpg')",}}>
+      <div className=" px-40 bg-center h-screen" style={{ backgroundImage: "url('src/assets/2187256.jpg')"}}>
       <OtheCars />
       </div>
+
+      <CarModal/>
      
     </div>
   );

@@ -1,14 +1,16 @@
 import React from "react";
 import Car from "../assets/Car.png";
-function CarTicket() {
+function CarTicket(props) {
   return (
-    <div className=" bg-gray-700 bg-opacity-50 text-white w-80 h-80 pl-5">
-      <img src={Car} alt="" />
-      <h2 className="pl-20">Jaguar Jx</h2>
-      <p className="pl-20">80 000$</p>
-      <button className="rounded-3xl bg-white text-black p-3 ml-20">
+    <div className=" bg-gray-700 bg-opacity-50 text-white w-85 h-120 ">
+      <img className="max-w-80 pt-4" src={props.picture} alt="" />
+      <h2 className="text-2xl text-center font-bold text-center" >{props.marque} </h2>
+      <p className="pt-4 text-center">{props.price}</p>
+      <div className="flex justify-around mt-4 mb-8">
+      <btn className="rounded-3xl text-center bg-white text-black py-2 px-4">
         Know more
-      </button>
+      </btn>
+      </div>
     </div>
   );
 }
