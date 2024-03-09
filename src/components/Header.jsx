@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useRef } from "react";
 import Car from "../assets/Car.png";
 
 
 function Header() {
+ 
+
   return (
     <section className=" pt-40 ">
       <div className="flex justify-between items-center  text-white">
@@ -30,6 +32,7 @@ function Header() {
         />
         
       </div>
+     
     </section>
   );
 }

@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+$mouse-width: 2.5rem;
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+}
+
+.mouse {
+  width: 12%;
+  height: auto;
+}
+
+.scroll {
+  animation-name: scroll;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(0.65, -0.55, 0.25, 1.5);
+  animation-iteration-count: infinite;
+  transform-origin: 50% 20.5px;
+  will-change: transform, opacity;
+  opacity: 1;
+}
+
+.scroll-link {
+  position: absolute;
+  bottom: 1rem;
+  left: 55%;
+  transform: translateX(-50%);
+}
+
+@keyframes scroll {
+  0%,
+  20% {
+    transform: translateY(0) scaleY(1);
+  }
+
+  100% {
+    transform: translateY(36px) scaleY(2);
+    opacity: 0;
+  }
+}

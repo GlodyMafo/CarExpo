@@ -1,13 +1,13 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import Car from "../assets/Car.png";
 import { Canvas } from "@react-three/fiber";
 import {useGLTF, Stage, PresentationControls} from "@react-three/drei"
 import Second3D from "./Second3D ";
 
 
-function DisplayCar() {
+function DisplayCar({props}, ref) {
   return (
-    <section className="h-screen flex flex-col items-center pt-10">
+    <section className="h-screen flex flex-col items-center pt-10" ref={ref}>
       <h1 className="text-white text-5xl font-bold pt-10 ">Meilleure Vente</h1>
 
       <div className="pt-20 pl-20">
@@ -20,7 +20,7 @@ function DisplayCar() {
         </p>
       </div>
       
-      <Canvas dpr={[5,7]} shadows camera={{fov:45}} style={{"position":"absolute", "background":"transparent"}} >
+      <Canvas dpr={[2,4]} shadows camera={{fov:45}} style={{"position":"absolute", "background":"transparent"}} >
       {/* <color attach="background" args={["#101010"]}/> */}
      <PresentationControls speed={1.5} global zoom={0.5} polar={[-0.1, Math.PI/4]}>
      <Stage environment={"sunset"}>
@@ -33,4 +33,4 @@ function DisplayCar() {
   );
 }
 
-export default DisplayCar;
+export default forwardRef (DisplayCar);
