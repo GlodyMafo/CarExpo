@@ -6,7 +6,7 @@ function Header() {
  
 
   return (
-    <section className=" pt-40 ">
+    <section className=" pt-[60px] ">
       <div className="flex justify-between items-center  text-white">
         <div className="w-2/4">
           <h1 className="text-5xl font-bold">

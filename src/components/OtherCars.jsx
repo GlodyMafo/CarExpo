@@ -18,6 +18,8 @@ function OtheCars() {
         <CarTicket marque="Aston Martin db5 833" picture={aston} price="600.000$" />
         <CarTicket  marque="Mercedes Benz 300sl" picture={mercedes} price="600.000$"/>
     </div>
+
+    <p className="text-white pt-[180px]">disigned by GlodyMafo</p>
   
     </section>
  
