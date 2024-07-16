@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import DisplayCar from "./components/DisplayCar";
 import OtheCars from "./components/OtherCars";
 import React, { useRef } from 'react';
+import { isDesktop } from 'react-device-detect';
 
 
 
@@ -14,9 +15,17 @@ export default function App() {
    ref.current?.scrollIntoView({behavior:'smooth'})
   }
 
+  if (!isDesktop) {
+    return (
+        <div>
+            <h1 className="text-5xl font-bold ">Désolé, ce site est accessible uniquement sur des écrans d'ordinateurs.</h1>
+        </div>
+    );
+}
+
   return (
   
-    <div className="bg-black">
+    <div className="bg-black desktop-only">
       <div className=" px-40 bg-center h-screen" style={{ backgroundImage: "url('src/assets/2187256.jpg')",}}>
           <Navbar />
           <Header />
@@ -48,6 +57,7 @@ export default function App() {
       <div className=" px-40 bg-center h-sreen" style={{ backgroundImage: "url('src/assets/2187256.jpg')"}}>
       <OtheCars />
       </div>
+
     </div>
   );
 }

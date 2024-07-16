@@ -46,3 +46,13 @@ $mouse-width: 2.5rem;
     opacity: 0;
   }
 }
+
+.desktop-only {
+  display: none; /* Par défaut, ne pas afficher sur mobile */
+}
+
+@media (min-width: 1000px) {
+  .desktop-only {
+      display: block; /* Afficher uniquement sur écrans d'ordinateur */
+  }
+}
